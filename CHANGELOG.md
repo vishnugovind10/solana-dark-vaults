@@ -5,6 +5,7 @@
 ### Dependency hardening
 
 - Resolved `GHSA-w5hq-g745-h8pq` with a scoped lockfile override and documented the upstream major-version constraint and call-path triage.
+- Grouped weekly minor and patch dependency updates per ecosystem and labeled generated pull requests consistently.
 
 ### Phase 0 - scaffold and toolchain
 
