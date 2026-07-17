@@ -23,6 +23,10 @@
 
 - Added a confirmation-gated, parameter-complete devnet deployment script and an evidence procedure that explicitly remains blocked on verified Arcium callback integration.
 
+### Repository housekeeping
+
+- Verified the author link against the GitHub profile, applied the conventional `good first issue` label, and made executable documentation discovery recursive.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.

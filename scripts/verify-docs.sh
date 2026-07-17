@@ -5,6 +5,11 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 extracted="$(mktemp)"
 trap 'rm -f "$extracted"' EXIT
 
+mapfile -d '' markdown_files < <(
+  printf '%s\0' "$repo_root/README.md"
+  find "$repo_root/docs" -type f -name '*.md' -print0 | sort -z
+)
+
 # Git Bash ships a GNU `link.exe` that shadows MSVC's linker. Preserve native Rust verification
 # when this script is launched from a Visual Studio developer environment.
 if command -v cygpath >/dev/null && [[ "$(command -v link.exe 2>/dev/null || true)" == "/usr/bin/link.exe" ]]; then
@@ -16,10 +21,10 @@ if command -v cygpath >/dev/null && [[ "$(command -v link.exe 2>/dev/null || tru
 fi
 
 awk '
-  /^```bash$/ { in_block = 1; next }
+  /^```(bash|sh)$/ { in_block = 1; next }
   /^```$/ && in_block { in_block = 0; print ""; next }
   in_block { print }
-' "$repo_root/README.md" "$repo_root"/docs/*.md > "$extracted"
+' "${markdown_files[@]}" > "$extracted"
 
 if [[ ! -s "$extracted" ]]; then
   echo "no executable bash documentation blocks found" >&2
