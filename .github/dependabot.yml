@@ -14,8 +14,12 @@ updates:
     groups:
       coordinator-dependencies:
         patterns: ["*"]
+    ignore:
+      - dependency-name: "@types/node"
+        versions: [">=25"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
-
+    ignore:
+      - dependency-name: dtolnay/rust-toolchain
