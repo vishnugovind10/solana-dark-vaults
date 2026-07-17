@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 - unreleased
+## 0.1.0 - 2026-07-17
 
 ### Dependency hardening
 
@@ -30,6 +30,9 @@
 
 - Verified the author link against the GitHub profile, applied the conventional `good first issue` label, and made executable documentation discovery recursive.
 
+### Release and citation
+
+- Added validated citation metadata and evidence-focused v0.1.0 release notes.
 
 ### Phase 0 - scaffold and toolchain
 

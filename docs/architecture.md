@@ -62,11 +62,10 @@ The on-chain account allows one pending computation. The coordinator writes the 
 4. The Anchor handler requires the configured callback signer, the exact pending epoch, three weights at or below 10,000, and a total of exactly 10,000 bps.
 5. An adapter maps weights to protocol positions. The shipped adapter is a deterministic mock and performs no CPI.
 
-The release implements steps 1 and 4 in Anchor source and the encrypted instruction in Arcis source. End-to-end callback account wiring is pending Linux local-cluster verification and is therefore not marked complete.
+The release implements steps 1 and 4 in Anchor source and the encrypted instruction in Arcis source. Hosted Linux CI verifies the configured local-cluster build and test path; end-to-end Arcium callback account wiring is not implemented and is therefore not marked complete.
 
 ## MPC configuration
 
 `Arcium.toml` selects two local nodes and the Cerberus backend. Arcium describes Cerberus as a dishonest-majority protocol: authenticated shares let honest nodes detect malicious behavior, correctness holds if at least one node is honest, and an adversary can still abort. The local node count tests wiring only. A deployment must separately assess operator independence, liveness, recovery set, and callback key custody.
 
 Devnet offset `456` and mainnet offset `2026` are recorded from the current Arcium deployment documentation. These values are drift-prone and must be rechecked before deployment.
-

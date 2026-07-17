@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+title: "solana-dark-vaults"
+type: software
+authors:
+  - family-names: "Govind"
+    given-names: "Vishnu"
+repository-code: "https://github.com/vishnugovind10/solana-dark-vaults"
+url: "https://github.com/vishnugovind10/solana-dark-vaults"
+license: "Apache-2.0"
+version: "0.1.0"
+date-released: 2026-07-17
+abstract: >-
+  Institutional allocators can use Solana's public liquidity, but a normal vault rebalance
+  broadcasts target weights and timing before execution. ZK pools isolate liquidity, TEEs add
+  hardware trust, and Token-2022 confidential transfers mask amounts without making allocation
+  logic private. solana-dark-vaults is a reference architecture that separates encrypted strategy
+  computation from public Solana settlement: an Anchor accounting program, a fixed-width Arcis
+  allocation circuit, and a metered off-chain coordinator.

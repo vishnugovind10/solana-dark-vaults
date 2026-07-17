@@ -33,7 +33,7 @@ It does not claim complete MEV protection. Strategy inputs and target weights ca
 |---|---|---|
 | Share math, pause, queue, callback authorization | Implemented | Rust host tests; checked integer operations |
 | Fixed-three-pool reference allocator | Implemented | 24 generated fixtures plus boundary and rejection tests |
-| Arcis encrypted allocation definition | Implemented, hosted Linux CI verification pending | `encrypted-ixs/src/lib.rs`; `arcium build` and `arcium test` workflow added, result pending |
+| Arcis encrypted allocation definition | Implemented, verified in hosted Linux CI (build + test) | `arcium build --skip-keys-sync` plus `arcium test` passed in hosted Ubuntu on commit `951bdc5`; this verifies the configured two-node local cluster path, not a devnet confidential callback round |
 | Local encrypted coordinator transport | Implemented | X25519 + AES-256-GCM; explicitly not an MXE |
 | x402 payment flow | Mocked | In-process challenge, signature, retry, and cost ledger; no funds move |
 | Pool settlement | Mocked | Deterministic three-position adapter; no protocol CPI |
@@ -99,16 +99,20 @@ The configured developer cluster uses two Cerberus nodes. Cerberus is a dishones
 
 The release plan is in [docs/roadmap.md](docs/roadmap.md). Issues are scoped for adapter work, circuit variants, documentation, and accounting hardening. Start with [CONTRIBUTING.md](CONTRIBUTING.md), and read [SECURITY.md](SECURITY.md) before reporting a vulnerability.
 
+## Citing this work
+
+Use the repository's [CITATION.cff](CITATION.cff) metadata or GitHub's **Cite this repository** button. The citation describes a reference architecture and does not imply an audit or deployment assurance.
+
 ## Sources
 
-- [Birdeye, OKX, and 1inch: Solana H1 2026 report](https://birdeye.so/research/detail/solana-h1-2026-report-primed-for-the-third-leap) — market context for tokenized equities and on-chain liquidity.
-- [Visa and Artemis: Agentic Payments from the Ground Up](https://www.visa.com/en-us/thought-leadership/innovation/agentic-payments-from-the-ground-up) — measured x402 activity and limits of the current market.
-- [Delphi Digital: Arcium and private on-chain activity](https://members.delphidigital.io/reports/arcium-enabling-the-next-phase-of-private-on-chain-activity) — independent ecosystem analysis.
-- [Arcium developer documentation](https://docs.arcium.com/developers) — installation, Arcis types, encryption, and computation lifecycle.
-- [Arcium MPC protocol documentation](https://docs.arcium.com/multi-party-execution-environments-mxes/mpc-protocols) — Cerberus security assumptions.
+- [Birdeye, OKX, and 1inch: Solana H1 2026 report](https://birdeye.so/research/detail/solana-h1-2026-report-primed-for-the-third-leap) - market context for tokenized equities and on-chain liquidity.
+- [Visa and Artemis: Agentic Payments from the Ground Up](https://www.visa.com/en-us/thought-leadership/innovation/agentic-payments-from-the-ground-up) - measured x402 activity and limits of the current market.
+- [Delphi Digital: Arcium and private on-chain activity](https://members.delphidigital.io/reports/arcium-enabling-the-next-phase-of-private-on-chain-activity) - independent ecosystem analysis.
+- [Arcium developer documentation](https://docs.arcium.com/developers) - installation, Arcis types, encryption, and computation lifecycle.
+- [Arcium MPC protocol documentation](https://docs.arcium.com/multi-party-execution-environments-mxes/mpc-protocols) - Cerberus security assumptions.
 
 ## Author
 
-Vishnu Govind — [GitHub](https://github.com/vishnugovind10) · [Medium](https://medium.com/@vishnugovind10) · [LinkedIn](https://www.linkedin.com/in/vishnu-govind)
+Vishnu Govind - [GitHub](https://github.com/vishnugovind10) | [Medium](https://medium.com/@vishnugovind10) | [LinkedIn](https://www.linkedin.com/in/vishnu-govind)
 
 Apache-2.0 licensed.
