@@ -54,7 +54,7 @@ jobs:
           timeout 15m ./scripts/localnet-up.sh
       - name: Upload diagnostic logs
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: arcium-diagnostics
           path: |
