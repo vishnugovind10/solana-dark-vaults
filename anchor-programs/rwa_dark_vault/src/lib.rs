@@ -16,7 +16,7 @@ pub mod state;
 
 use instructions::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWxTWqkZJY2RwrqE9g6L9LqTnX6A");
+declare_id!("B2TN4RKWe3piqKDPoFXvi28p7877bCut8YwqVaNjdAvA");
 
 #[program]
 pub mod rwa_dark_vault {

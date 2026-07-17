@@ -1,5 +1,9 @@
-/target/
+/target/*
 **/target/
+!/target/
+!/target/deploy/
+/target/deploy/*
+!/target/deploy/rwa_dark_vault-keypair.json
 **/node_modules/
 agent-coordinator/dist/
 agent-coordinator/.state/
@@ -9,4 +13,3 @@ agent-coordinator/.state/
 .anchor/
 .arcium/
 test-ledger/
-
