@@ -8,6 +8,22 @@ permissions:
   contents: read
 
 jobs:
+  devcontainer:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - name: Build and verify development container
+        uses: devcontainers/ci@513af61f4de4f75d37e4438f184ba4358f0fc1ca
+        with:
+          runCmd: |
+            rustc --version
+            node --version
+            solana --version
+            anchor --version
+            arcium --version
+            cargo test --workspace --locked
+
   linux-mxe:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -31,7 +47,7 @@ jobs:
           arcium --version
           arcup version
       - name: Build MXE and encrypted instructions
-        run: arcium build
+        run: arcium build --skip-keys-sync
       - name: Run local Arcium cluster tests
         run: |
           sudo prlimit --pid $$ --nofile=1048576:1048576
