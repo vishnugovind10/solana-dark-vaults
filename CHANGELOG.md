@@ -15,6 +15,10 @@
 
 - Added an asciinema recording hook, documented GIF conversion, and kept the README media embed inactive until an asset is committed.
 
+### Self-audit
+
+- Published the Anchor review policy, completed checklist, and July 2026 findings; rejected empty computation commitments with a regression test.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.

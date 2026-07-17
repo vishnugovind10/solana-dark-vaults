@@ -91,6 +91,7 @@ impl Vault {
 
     pub fn queue_rebalance(&mut self, input_commitment: [u8; 32]) -> Result<u64> {
         self.assert_active()?;
+        require!(input_commitment != [0; 32], VaultError::InvalidCommitment);
         require!(
             !self.pending_computation.active,
             VaultError::ComputationAlreadyPending
@@ -216,5 +217,13 @@ mod tests {
             .expect("settle");
         assert_eq!(vault.epoch, 1);
         assert!(!vault.pending_computation.active);
+    }
+
+    #[test]
+    fn queue_rejects_an_empty_commitment() {
+        let mut vault = vault();
+        assert!(vault.queue_rebalance([0; 32]).is_err());
+        assert!(!vault.pending_computation.active);
+        assert_eq!(vault.epoch, 0);
     }
 }

@@ -18,6 +18,8 @@ pub enum VaultError {
     StatusUnchanged,
     #[msg("a computation is already pending")]
     ComputationAlreadyPending,
+    #[msg("input commitment must not be all zeroes")]
+    InvalidCommitment,
     #[msg("no computation is pending")]
     NoPendingComputation,
     #[msg("callback epoch does not match the pending computation")]
