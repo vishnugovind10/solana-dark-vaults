@@ -9,8 +9,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
-    "test": "node --test --experimental-strip-types test/*.test.ts",
-    "demo": "node --experimental-strip-types src/demo.ts"
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "coverage": "npm run build && node --experimental-test-coverage --test dist/test/*.test.js",
+    "demo": "npm run build && node dist/src/demo.js"
   },
   "dependencies": {
     "@arcium-hq/client": "0.13.2"
@@ -20,4 +21,3 @@
     "typescript": "7.0.2"
   }
 }
-
