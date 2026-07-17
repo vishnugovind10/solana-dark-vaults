@@ -1,0 +1,23 @@
+{
+  "name": "@universal-ventures/dark-vault-coordinator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "demo": "node --experimental-strip-types src/demo.ts"
+  },
+  "dependencies": {
+    "@arcium-hq/client": "0.13.2"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "7.0.2"
+  }
+}
+

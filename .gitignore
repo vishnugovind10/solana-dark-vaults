@@ -1,0 +1,12 @@
+/target/
+**/target/
+**/node_modules/
+agent-coordinator/dist/
+agent-coordinator/.state/
+.env
+.DS_Store
+*.log
+.anchor/
+.arcium/
+test-ledger/
+

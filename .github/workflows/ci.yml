@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  portable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.97.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: agent-coordinator/package-lock.json
+      - run: cargo test --workspace --locked
+      - run: npm ci
+        working-directory: agent-coordinator
+      - run: npm run check
+        working-directory: agent-coordinator
+      - run: npm test
+        working-directory: agent-coordinator
+
