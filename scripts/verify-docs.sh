@@ -7,8 +7,12 @@ trap 'rm -f "$extracted"' EXIT
 
 # Git Bash ships a GNU `link.exe` that shadows MSVC's linker. Preserve native Rust verification
 # when this script is launched from a Visual Studio developer environment.
-if [[ "${OSTYPE:-}" == msys* && -n "${VCToolsInstallDir:-}" ]] && command -v cygpath >/dev/null; then
-  export PATH="$(cygpath -u "${VCToolsInstallDir}bin/Hostx64/x64"):$PATH"
+if command -v cygpath >/dev/null && [[ "$(command -v link.exe 2>/dev/null || true)" == "/usr/bin/link.exe" ]]; then
+  msvc_root="/c/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC"
+  if [[ -d "$msvc_root" ]]; then
+    msvc_version="$(find "$msvc_root" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
+    export PATH="$msvc_version/bin/Hostx64/x64:$PATH"
+  fi
 fi
 
 awk '
