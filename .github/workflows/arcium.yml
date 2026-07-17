@@ -1,0 +1,48 @@
+name: arcium
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  linux-mxe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - uses: dtolnay/rust-toolchain@1.97.1
+      - name: Install pinned Arcium toolchain
+        uses: arcium-hq/setup-arcium@15bb113634496b83627fada93d31c01bc92f6f31
+        with:
+          arcium-version: "0.13.2"
+          anchor-version: "1.1.2"
+          solana-cli-version: "3.1.10"
+          node-version: "24.10.0"
+          runner-arch-os: x86_64_linux
+      - name: Record toolchain
+        run: |
+          rustc --version
+          node --version
+          solana --version
+          anchor --version
+          arcium --version
+          arcup version
+      - name: Build MXE and encrypted instructions
+        run: arcium build
+      - name: Run local Arcium cluster tests
+        run: |
+          sudo prlimit --pid $$ --nofile=1048576:1048576
+          timeout 15m ./scripts/localnet-up.sh
+      - name: Upload diagnostic logs
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: arcium-diagnostics
+          path: |
+            artifacts/
+            .anchor/program-logs/
+            .anchor/test-ledger/validator.log
+          if-no-files-found: ignore

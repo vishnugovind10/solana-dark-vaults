@@ -7,6 +7,10 @@
 - Resolved `GHSA-w5hq-g745-h8pq` with a scoped lockfile override and documented the upstream major-version constraint and call-path triage.
 - Grouped weekly minor and patch dependency updates per ecosystem and labeled generated pull requests consistently.
 
+### Hosted Arcium verification
+
+- Added a pinned Ubuntu Arcium build and local-cluster workflow, the conventional encrypted-instruction layout, and reproducible WSL2/dev-container setup.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.

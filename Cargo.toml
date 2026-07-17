@@ -2,7 +2,7 @@
 members = [
   "anchor-programs/rwa_dark_vault",
 ]
-exclude = ["arcium-circuits"]
+exclude = ["arcium-circuits", "encrypted-ixs"]
 resolver = "2"
 
 [workspace.package]

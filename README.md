@@ -29,7 +29,7 @@ It does not claim complete MEV protection. Strategy inputs and target weights ca
 |---|---|---|
 | Share math, pause, queue, callback authorization | Implemented | Rust host tests; checked integer operations |
 | Fixed-three-pool reference allocator | Implemented | 24 generated fixtures plus boundary and rejection tests |
-| Arcis encrypted allocation definition | Implemented, Linux verification pending | `arcis_rebalance.rs`; Arcium CLI is unavailable on native Windows |
+| Arcis encrypted allocation definition | Implemented, hosted Linux CI verification pending | `encrypted-ixs/src/lib.rs`; `arcium build` and `arcium test` workflow added, result pending |
 | Local encrypted coordinator transport | Implemented | X25519 + AES-256-GCM; explicitly not an MXE |
 | x402 payment flow | Mocked | In-process challenge, signature, retry, and cost ledger; no funds move |
 | Pool settlement | Mocked | Deterministic three-position adapter; no protocol CPI |
@@ -85,7 +85,8 @@ The configured developer cluster uses two Cerberus nodes. Cerberus is a dishones
 ## Repository map
 
 - `anchor-programs/rwa_dark_vault`: Anchor accounts, instructions, share math, and pool adapter boundary.
-- `arcium-circuits`: Arcis instruction plus the deterministic reference implementation and fixtures.
+- `encrypted-ixs`: Arcis encrypted allocation instruction discovered by the Arcium CLI.
+- `arcium-circuits`: deterministic cleartext reference implementation and fixtures.
 - `agent-coordinator`: oracle boundary, local encrypted transport, crash recovery, settlement, and payment ledger.
 - `docs`: account/state diagrams, assumptions, limitations, setup, and roadmap.
 - `scripts`: portable demo, Arcium local-cluster gate, and executable documentation check.

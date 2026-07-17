@@ -15,3 +15,5 @@ wallet = "~/.config/solana/id.json"
 [workspace]
 members = ["anchor-programs/rwa_dark_vault"]
 
+[scripts]
+test = "cargo test --manifest-path arcium-circuits/Cargo.toml --locked"

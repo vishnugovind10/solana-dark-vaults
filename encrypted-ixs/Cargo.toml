@@ -1,0 +1,11 @@
+[package]
+name = "dark-vault-encrypted-ixs"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+rust-version = "1.97"
+
+[dependencies]
+arcis = "=0.13.2"
+
+[workspace]

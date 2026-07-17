@@ -1,5 +1,3 @@
-//! Arcis 0.13.2 circuit definition. Compile through `arcium build --features arcis-integration`.
-
 use arcis::*;
 
 #[encrypted]

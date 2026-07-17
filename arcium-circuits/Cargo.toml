@@ -8,13 +8,6 @@ rust-version = "1.97"
 [lib]
 name = "dark_vault_circuits"
 
-[features]
-default = []
-arcis-integration = ["dep:arcis"]
-
-[dependencies]
-arcis = { version = "=0.13.2", optional = true }
-
 [lints.rust]
 unsafe_code = "forbid"
 
