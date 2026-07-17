@@ -6,6 +6,6 @@
   },
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "remoteEnv": {
-    "PATH": "${containerEnv:HOME}/.cargo/bin:${containerEnv:HOME}/.local/share/solana/install/active_release/bin:${containerEnv:PATH}"
+    "PATH": "/home/vscode/.cargo/bin:/home/vscode/.local/share/solana/install/active_release/bin:${containerEnv:PATH}"
   }
 }
