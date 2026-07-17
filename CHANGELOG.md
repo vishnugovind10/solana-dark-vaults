@@ -12,6 +12,7 @@
 - Added a pinned Ubuntu Arcium build and local-cluster workflow, the conventional encrypted-instruction layout, and reproducible WSL2/dev-container setup.
 - Aligned Anchor with the official Arcium 0.13.x prerequisite and unified the CLI-discovered Cargo workspace.
 - Pinned the local Anchor program keypair used by hosted builds so the declared program ID remains reproducible.
+- Lowered the Anchor workspace Rust metadata floor to Solana's bundled BPF compiler while keeping hosted CI on Rust 1.97.1.
 
 ### Demo recording
 
