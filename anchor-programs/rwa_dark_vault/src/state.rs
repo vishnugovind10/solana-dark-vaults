@@ -202,16 +202,12 @@ mod tests {
     fn settlement_requires_matching_pending_epoch_and_exact_weights() {
         let mut vault = vault();
         let epoch = vault.queue_rebalance([9; 32]).expect("queue");
-        assert!(
-            vault
-                .settle_rebalance(epoch + 1, [5_000, 3_000, 2_000])
-                .is_err()
-        );
-        assert!(
-            vault
-                .settle_rebalance(epoch, [5_000, 3_000, 1_999])
-                .is_err()
-        );
+        assert!(vault
+            .settle_rebalance(epoch + 1, [5_000, 3_000, 2_000])
+            .is_err());
+        assert!(vault
+            .settle_rebalance(epoch, [5_000, 3_000, 1_999])
+            .is_err());
         vault
             .settle_rebalance(epoch, [5_000, 3_000, 2_000])
             .expect("settle");

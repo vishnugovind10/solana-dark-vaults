@@ -1,6 +1,7 @@
 //! Anchor settlement and accounting layer for the dark-vault reference architecture.
 #![allow(ambiguous_glob_reexports, unexpected_cfgs)]
 #![allow(
+    clippy::diverging_sub_expression,
     clippy::missing_errors_doc,
     clippy::needless_pass_by_value,
     clippy::wildcard_imports

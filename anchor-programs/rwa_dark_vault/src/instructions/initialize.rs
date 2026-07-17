@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-use crate::state::{POOL_COUNT, PendingComputation, VAULT_SEED, Vault, VaultStatus};
+use crate::state::{PendingComputation, Vault, VaultStatus, POOL_COUNT, VAULT_SEED};
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
