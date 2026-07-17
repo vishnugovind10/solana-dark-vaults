@@ -19,6 +19,10 @@
 
 - Published the Anchor review policy, completed checklist, and July 2026 findings; rejected empty computation commitments with a regression test.
 
+### Devnet preparation
+
+- Added a confirmation-gated, parameter-complete devnet deployment script and an evidence procedure that explicitly remains blocked on verified Arcium callback integration.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.

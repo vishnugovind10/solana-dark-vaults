@@ -7,3 +7,4 @@
 - Token-2022 confidential transfer support is feature-gated design work. Local custody is represented by accounting state; no real-value token CPI should be inferred.
 - Pool adapters are deterministic mocks. There are no Kamino, JupLend, or Maple write integrations.
 - Settlement is public. Realized allocations and timing remain observable after execution.
+- Devnet deployment is preparation-only: the guarded script matches the documented `arcium deploy` parameters, but the program does not yet expose Arcium computation-definition and verified callback accounts, so no confidential devnet round can be run or claimed.

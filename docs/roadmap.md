@@ -13,8 +13,9 @@ Dates are targets, not release promises.
 
 - Compile and test the Arcis instruction on a two-node Linux local cluster.
 - Wire Arcium computation-definition and callback accounts into the Anchor program.
+- Validate `scripts/deploy-devnet.sh` and complete the evidence procedure in `docs/devnet.md` from a funded Linux/WSL2 operator environment.
 - Add one read-only Kamino or JupLend data adapter with source authentication and freshness metadata.
-- Deploy an MXE to devnet cluster offset `456` only after rechecking current official configuration.
+- Deploy an MXE to devnet cluster offset `456` only after rechecking current official configuration; record the computation-definition, queue, and finalization signatures.
 
 ## v0.3 — target Q4 2026
 
@@ -22,4 +23,3 @@ Dates are targets, not release promises.
 - Evaluate settlement timing decorrelation and its liveness/cost trade-offs.
 - Add property tests and fuzzing for share math, callback replay protection, and adapter account validation.
 - Prototype one write adapter against pinned local-validator artifacts; no mainnet capital.
-
