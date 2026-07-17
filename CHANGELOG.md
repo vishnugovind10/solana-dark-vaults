@@ -2,6 +2,10 @@
 
 ## 0.1.0 - unreleased
 
+### Dependency hardening
+
+- Resolved `GHSA-w5hq-g745-h8pq` with a scoped lockfile override and documented the upstream major-version constraint and call-path triage.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.
