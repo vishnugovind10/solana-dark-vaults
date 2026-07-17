@@ -33,7 +33,7 @@ It does not claim complete MEV protection. Strategy inputs and target weights ca
 |---|---|---|
 | Share math, pause, queue, callback authorization | Implemented | Rust host tests; checked integer operations |
 | Fixed-three-pool reference allocator | Implemented | 24 generated fixtures plus boundary and rejection tests |
-| Arcis encrypted allocation definition | Implemented, verified in hosted Linux CI (build + test) | `arcium build --skip-keys-sync` plus `arcium test` passed in hosted Ubuntu on commit `951bdc5`; this verifies the configured two-node local cluster path, not a devnet confidential callback round |
+| Arcis encrypted allocation definition | Implemented, verified in hosted Linux CI (build + test) | `arcium build --skip-keys-sync` plus `arcium test` passed in hosted Ubuntu on commit `ecaca16`; this verifies the configured two-node local cluster path, not a devnet confidential callback round |
 | Local encrypted coordinator transport | Implemented | X25519 + AES-256-GCM; explicitly not an MXE |
 | x402 payment flow | Mocked | In-process challenge, signature, retry, and cost ledger; no funds move |
 | Pool settlement | Mocked | Deterministic three-position adapter; no protocol CPI |
