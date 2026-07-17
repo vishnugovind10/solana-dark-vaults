@@ -11,6 +11,10 @@
 
 - Added a pinned Ubuntu Arcium build and local-cluster workflow, the conventional encrypted-instruction layout, and reproducible WSL2/dev-container setup.
 
+### Demo recording
+
+- Added an asciinema recording hook, documented GIF conversion, and kept the README media embed inactive until an asset is committed.
+
 ### Phase 0 - scaffold and toolchain
 
 - Added the Rust workspace, Anchor crate, circuit crate, and TypeScript coordinator package.

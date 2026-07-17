@@ -5,6 +5,10 @@ Institutional allocators can use Solana's public liquidity, but a normal vault r
 > [!CAUTION]
 > Not audited. Not production software. Do not deploy with real capital.
 
+<!-- Demo recording (enable only after docs/assets/demo.gif is committed):
+![Recorded local reference epoch](docs/assets/demo.gif)
+-->
+
 ```mermaid
 flowchart LR
     D["Depositor"] -->|"public SPL / Token-2022 deposit"| V["Anchor vault"]

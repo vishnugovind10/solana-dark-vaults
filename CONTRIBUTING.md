@@ -1,5 +1,7 @@
 # Contributing
 
+After changing demo output, regenerate the recording on Linux/WSL2 with `./scripts/record-demo.sh` and convert the resulting cast with `agg` before enabling the README embed.
+
 Contributions should make a claim more testable, reduce a documented limitation, or strengthen a trust boundary.
 
 ## Setup
