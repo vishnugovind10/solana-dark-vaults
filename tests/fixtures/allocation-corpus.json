@@ -1,0 +1,11 @@
+{
+  "description": "Fixture families are generated deterministically for seeds 1 through 24 in arcium-circuits/tests/reference.rs.",
+  "invariants": [
+    "total_capital > 0",
+    "adjacent yields differ in discrimination cases",
+    "every weight is at or below its pool cap",
+    "weights sum to exactly 10000 bps"
+  ],
+  "boundary_cases": ["binding caps", "equal scores", "single-pool dominance", "zero capital", "zero risk", "insufficient aggregate caps"]
+}
+

@@ -1,5 +1,11 @@
-//! Deterministic reference logic and Arcis circuit definitions.
+//! Fixed-width allocation logic shared by the cleartext oracle and Arcis definition.
 
-/// Fixed pool count keeps circuit size bounded and test vectors reproducible.
-pub const POOL_COUNT: usize = 3;
+pub mod rebalance;
 
+#[cfg(feature = "arcis-integration")]
+pub mod arcis_rebalance;
+
+pub use rebalance::{
+    AllocationError, AllocationInput, AllocationOutput, BPS_DENOMINATOR, POOL_COUNT, PoolParams,
+    compute_allocation,
+};

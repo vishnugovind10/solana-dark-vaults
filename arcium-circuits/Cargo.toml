@@ -1,13 +1,25 @@
 [package]
 name = "dark-vault-circuits"
 version = "0.1.0"
-edition.workspace = true
-license.workspace = true
-rust-version.workspace = true
+edition = "2024"
+license = "Apache-2.0"
+rust-version = "1.97"
 
 [lib]
 name = "dark_vault_circuits"
 
-[lints]
-workspace = true
+[features]
+default = []
+arcis-integration = ["dep:arcis"]
 
+[dependencies]
+arcis = { version = "=0.13.2", optional = true }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+
+[workspace]

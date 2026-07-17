@@ -1,8 +1,8 @@
 [workspace]
 members = [
   "anchor-programs/rwa_dark_vault",
-  "arcium-circuits",
 ]
+exclude = ["arcium-circuits"]
 resolver = "2"
 
 [workspace.package]
@@ -16,4 +16,3 @@ unsafe_code = "forbid"
 [workspace.lints.clippy]
 all = { level = "warn", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
-
