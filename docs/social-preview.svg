@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">solana-dark-vaults architecture</title>
+  <desc id="desc">Public Solana settlement around a confidential Arcium allocation circuit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#102a43"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#78e6c8"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <text x="80" y="105" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="52" font-weight="700">solana-dark-vaults</text>
+  <text x="82" y="150" fill="#a8bdce" font-family="Inter,Segoe UI,sans-serif" font-size="24">Confidential strategy compute. Public, scoped settlement.</text>
+  <rect x="80" y="225" width="300" height="150" rx="18" fill="#132f4c" stroke="#4da3d9" stroke-width="2"/>
+  <text x="125" y="285" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="27" font-weight="600">Anchor vault</text>
+  <text x="125" y="325" fill="#a8bdce" font-family="Inter,Segoe UI,sans-serif" font-size="20">shares · epochs · callbacks</text>
+  <rect x="490" y="225" width="300" height="150" rx="18" fill="#123b3d" stroke="#78e6c8" stroke-width="2"/>
+  <text x="535" y="285" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="27" font-weight="600">Arcium MXE</text>
+  <text x="535" y="325" fill="#b9ded5" font-family="Inter,Segoe UI,sans-serif" font-size="20">encrypted allocation circuit</text>
+  <rect x="900" y="225" width="300" height="150" rx="18" fill="#132f4c" stroke="#4da3d9" stroke-width="2"/>
+  <text x="945" y="285" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="27" font-weight="600">Pool adapters</text>
+  <text x="945" y="325" fill="#a8bdce" font-family="Inter,Segoe UI,sans-serif" font-size="20">public post-trade CPIs</text>
+  <path d="M380 300 L480 300" stroke="#78e6c8" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+  <path d="M790 300 L890 300" stroke="#78e6c8" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+  <text x="80" y="500" fill="#78e6c8" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="600">ENCRYPTED BEFORE SETTLEMENT</text>
+  <text x="80" y="545" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="23">Inputs, target weights, intermediate state</text>
+  <text x="710" y="500" fill="#4da3d9" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="600">PUBLIC AFTER SETTLEMENT</text>
+  <text x="710" y="545" fill="#f4f8fb" font-family="Inter,Segoe UI,sans-serif" font-size="23">Timing, accounts, CPIs, realized positions</text>
+</svg>
+

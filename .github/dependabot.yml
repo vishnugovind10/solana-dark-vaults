@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      rust-dependencies:
+        patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /agent-coordinator
+    schedule:
+      interval: weekly
+    groups:
+      coordinator-dependencies:
+        patterns: ["*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
