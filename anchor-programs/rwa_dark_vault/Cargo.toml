@@ -19,8 +19,7 @@ idl-build = ["anchor-lang/idl-build"]
 cspl = []
 
 [dependencies]
-anchor-lang = "=1.1.2"
+anchor-lang = "=1.0.2"
 
 [lints]
 workspace = true
-

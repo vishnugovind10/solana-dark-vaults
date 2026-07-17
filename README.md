@@ -46,7 +46,7 @@ Clone the repository, install Rust 1.97.1 and Node.js 24 LTS, then run this bloc
 
 ```bash
 npm --prefix agent-coordinator ci --no-audit --no-fund
-cargo test --workspace --locked
+cargo test --workspace --exclude encrypted-ixs --locked
 cargo test --manifest-path arcium-circuits/Cargo.toml --locked
 npm --prefix agent-coordinator run check
 npm --prefix agent-coordinator test

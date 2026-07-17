@@ -4,7 +4,7 @@ No devnet deployment or confidential computation has been performed for this rel
 
 ## Prerequisites
 
-- Arcium 0.13.2, Solana CLI 3.1.10, Anchor 1.1.2, and Docker.
+- Arcium 0.13.2, Solana CLI 3.1.10, Anchor 1.0.2, and Docker.
 - A funded Solana devnet keypair with roughly 2–5 devnet SOL.
 - A dedicated HTTPS devnet RPC endpoint.
 - A completed `arcium build` and `arcium test` on the same commit.

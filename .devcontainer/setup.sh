@@ -4,7 +4,7 @@ set -euo pipefail
 readonly RUST_VERSION="1.97.1"
 readonly NODE_VERSION="24.10.0"
 readonly SOLANA_VERSION="3.1.10"
-readonly ANCHOR_VERSION="1.1.2"
+readonly ANCHOR_VERSION="1.0.2"
 readonly ARCIUM_VERSION="0.13.2"
 
 sudo apt-get update

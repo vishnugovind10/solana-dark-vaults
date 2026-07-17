@@ -18,7 +18,7 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: agent-coordinator/package-lock.json
-      - run: cargo test --workspace --locked
+      - run: cargo test --workspace --exclude encrypted-ixs --locked
       - run: cargo test --manifest-path arcium-circuits/Cargo.toml --locked
       - run: npm ci
         working-directory: agent-coordinator

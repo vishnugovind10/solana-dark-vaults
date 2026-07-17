@@ -10,6 +10,7 @@
 ### Hosted Arcium verification
 
 - Added a pinned Ubuntu Arcium build and local-cluster workflow, the conventional encrypted-instruction layout, and reproducible WSL2/dev-container setup.
+- Aligned Anchor with the official Arcium 0.13.x prerequisite and unified the CLI-discovered Cargo workspace.
 
 ### Demo recording
 
@@ -26,6 +27,7 @@
 ### Repository housekeeping
 
 - Verified the author link against the GitHub profile, applied the conventional `good first issue` label, and made executable documentation discovery recursive.
+
 
 ### Phase 0 - scaffold and toolchain
 

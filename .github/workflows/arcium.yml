@@ -22,7 +22,7 @@ jobs:
             solana --version
             anchor --version
             arcium --version
-            cargo test --workspace --locked
+            cargo test --workspace --exclude encrypted-ixs --locked
 
   linux-mxe:
     runs-on: ubuntu-24.04
@@ -34,7 +34,7 @@ jobs:
         uses: arcium-hq/setup-arcium@15bb113634496b83627fada93d31c01bc92f6f31
         with:
           arcium-version: "0.13.2"
-          anchor-version: "1.1.2"
+          anchor-version: "1.0.2"
           solana-cli-version: "3.1.10"
           node-version: "24.10.0"
           runner-arch-os: x86_64_linux

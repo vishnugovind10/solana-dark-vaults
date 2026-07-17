@@ -7,5 +7,3 @@ rust-version = "1.97"
 
 [dependencies]
 arcis = "=0.13.2"
-
-[workspace]
