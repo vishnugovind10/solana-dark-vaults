@@ -19,10 +19,14 @@ jobs:
           cache: npm
           cache-dependency-path: agent-coordinator/package-lock.json
       - run: cargo test --workspace --locked
+      - run: cargo test --manifest-path arcium-circuits/Cargo.toml --locked
       - run: npm ci
         working-directory: agent-coordinator
       - run: npm run check
         working-directory: agent-coordinator
       - run: npm test
         working-directory: agent-coordinator
-
+      - run: npm run coverage
+        working-directory: agent-coordinator
+      - run: ./scripts/demo.sh
+      - run: ./scripts/verify-docs.sh

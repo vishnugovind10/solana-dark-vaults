@@ -6,6 +6,7 @@ Install Git, Rust 1.97.1 through rustup, and Node.js 24 LTS. Then run the comman
 
 ```text
 cargo test --workspace
+cargo test --manifest-path arcium-circuits/Cargo.toml
 npm --prefix agent-coordinator ci
 npm --prefix agent-coordinator run check
 npm --prefix agent-coordinator test
@@ -25,4 +26,3 @@ anchor --version
 ```
 
 The current official prerequisites are Solana CLI 3.1.10, Anchor 1.0.2 or later compatible tooling, Yarn, Docker, and Docker Compose. This repository pins Anchor crates at 1.1.2 and Arcium packages at 0.13.2. See `docs/limitations.md` before interpreting the circuit integration status.
-

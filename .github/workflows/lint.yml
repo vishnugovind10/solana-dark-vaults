@@ -17,4 +17,8 @@ jobs:
           components: clippy,rustfmt
       - run: cargo fmt --all -- --check
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
-
+      - run: cargo clippy --manifest-path arcium-circuits/Cargo.toml --all-targets --locked -- -D warnings
+      - run: npm ci
+        working-directory: agent-coordinator
+      - run: npm run check
+        working-directory: agent-coordinator
