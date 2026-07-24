@@ -31,7 +31,7 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
       - uses: dtolnay/rust-toolchain@1.97.1
       - name: Install pinned Arcium toolchain
-        uses: arcium-hq/setup-arcium@15bb113634496b83627fada93d31c01bc92f6f31
+        uses: arcium-hq/setup-arcium@21733b13b5868983f40188a83066e1203a547d3b
         with:
           arcium-version: "0.13.2"
           anchor-version: "1.0.2"
