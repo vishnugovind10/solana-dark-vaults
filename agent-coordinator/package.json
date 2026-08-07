@@ -14,7 +14,7 @@
     "demo": "npm run build && node dist/src/demo.js"
   },
   "dependencies": {
-    "@arcium-hq/client": "0.13.2"
+    "@arcium-hq/client": "0.14.1"
   },
   "overrides": {
     "jayson": {
@@ -22,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "@types/node": "24.10.1",
+    "@types/node": "24.13.3",
     "typescript": "7.0.2"
   }
 }
