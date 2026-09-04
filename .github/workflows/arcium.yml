@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
-      - uses: dtolnay/rust-toolchain@1.97.1
+      - uses: dtolnay/rust-toolchain@1.120.0
       - name: Install pinned Arcium toolchain
         uses: arcium-hq/setup-arcium@15bb113634496b83627fada93d31c01bc92f6f31
         with:
